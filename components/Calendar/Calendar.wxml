@@ -1,0 +1,58 @@
+<view class='calender-picker' bindtap="showCalendar" data-type='show'>
+	<slot></slot>
+</view>
+
+<!-- 弹框模式 -->
+<view class='calender-box' hidden='{{!show}}' catchtouchmove="noScroll">
+	<view class='calender-bg' bindtap="showCalendar"></view>
+	<view class='calender-view {{hasRadius}} {{hideCalendar?"hideCalendar":""}} {{isFullSucreen&&!showConfirm?"isFullSucreen":""}}' style="height:{{height}}">
+		<view class='calender-header'>
+			<view class='calender-title' wx:if='{{showTitle}}'>
+				{{title||'日期选择'}}
+				<view class='calender-close' bindtap="showCalendar">
+					<image src="../images/close.png" class='calender-close-image' > </image>
+				</view>
+			</view>
+			<block wx:if='{{showSubTitle}}'>
+				<picker class='calender-subtitle' bindchange="changeDate" bindcancel='showShortcutPicker' value="{{current}}" range="{{dateList}}" wx:if='{{shortcut}}'>
+					<view class='calender-subtitle-text' bindtap="showShortcutPicker">
+						{{dateList[current]}}
+						<view class='arrow {{showShortcut}}'></view>
+					</view>
+				</picker>
+				<view class='calender-subtitle' wx:else>{{dateList[current]}}</view>
+			</block>
+			<view class='calendar-weekdays'>
+				<block wx:for='{{weekdays}}' wx:key='index'>
+					<view class='calendar-weekday'>{{item}}</view>
+				</block>
+			</view>
+		</view>
+		<view class='calender-body' style="height:calc(100% - {{calenderBodyHeight}})">
+			<swiper class='calender-swiper' bindchange='dateChange' current='{{current}}' vertical='{{vertical}}'>
+				<block wx:for='{{monthList}}' wx:key='index'>
+					<swiper-item>
+						<view class='calender-mark box-center' wx:if="{{!hideMark}}">{{item.mark}}月</view>
+						<view class='calender-month'>
+							<block wx:for='{{item.data}}' wx:for-item='i' wx:for-index='ind' wx:key='ind'>
+								<view class='calender-day {{ind == 0?i.week:""}} {{i.active?"active":""}} {{i.disable?"disable":""}}' style="background:{{i.active?calenderColor:''}};color:{{i.middle?calenderColor:''}}" bindtap="choose" data-index='{{index}}' data-ind='{{ind}}' data-data='{{i.data}}'>
+									<view class='calender-middle' style="background:{{calenderColor}};" wx:if='{{i.middle}}'></view>
+									<view class='box-center text'>
+										{{i.day}}
+										<view wx:if='{{dateType==="range"}}' class='calender-tips'>
+											<view wx:if='{{i.start}}'>{{rangeText.start}}</view>
+											<view wx:if='{{i.end}}'>{{rangeText.end}}</view>
+										</view>
+									</view>
+								</view>
+							</block>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class='calender-footer {{isFullSucreen}}' wx:if='{{showConfirm}}'>
+			<view class='calender-btn {{dateType === "range" && !rangeDate.end ?"disable":""}} {{dateType === "multiple" && multipleDate.length < 1 ?"disable":""}}' style="background:{{calenderColor}}" bindtap="done">{{confirmText||'确定'}}</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,16 @@
+/* tabComponents/pages/index/index.wxss */
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20rpx;
+  padding: 20rpx;
+}
+
+.components-item {
+  height: 88rpx;
+  display: grid;
+  place-items: center;
+  border: 2rpx solid #999;
+  font-size: 24rpx;
+}

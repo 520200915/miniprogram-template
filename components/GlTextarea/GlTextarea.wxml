@@ -1,0 +1,13 @@
+<view class='textarea-box {{maxlength>0&&showWordLimit?"showWordLimit":""}}'>
+  <block wx:if='{{edit}}'>
+    <text class='textarea' bindtap="openTextarea" style="color:{{value?'#333':'#999'}}">{{value||placeholder||'请输入'}}</text>
+  </block>
+  <block wx:else>
+    <textarea class='_textarea_' maxlength="{{maxlength}}" value='{{value}}' bindinput='textareaInput' focus='{{textareaFocus}}' bindblur='textareaBlur' bindconfirm='textareaBlur' ></textarea>
+  </block>
+  <block wx:if='{{maxlength>0&&showWordLimit}}'>
+    <view class='wordLimit'>
+      {{value.length||0}} / {{maxlength}}
+    </view>
+  </block>
+</view>

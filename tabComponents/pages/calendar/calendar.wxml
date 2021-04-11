@@ -1,0 +1,21 @@
+<gl-cell border valueAlign='right' label='默认单选' labelWidth='20%'>
+	<calendar calenderHeight='{{calenderHeight}}' confirmText='完成' data-target='value' previous='0' showConfirm='{{false}}' vertical bindselect='select' value='{{value}}' showConfirm='{{true}}' maxDate='{{value}}' minDate='2020-08-10'>
+		{{value||'请选择'}}
+	</calendar>
+</gl-cell>
+<gl-cell border valueAlign='right' label='多选' labelWidth='20%'>
+	<calendar calenderHeight='{{calenderHeight}}' showConfirm='{{showConfirm}}' bindselect='multipleSelect' dateType='multiple' calenderColor='#000'>
+		{{multipleValue||'请选择'}}
+	</calendar>
+</gl-cell>
+<gl-cell border valueAlign='right' label='自定义起始日' labelWidth='35%'>
+	<calendar calenderHeight='{{calenderHeight}}' firstDayOfWeek='3' data-target='diyValue' vertical bindselect='select'>
+		{{diyValue||'请选择'}}
+	</calendar>
+</gl-cell>
+
+	<calendar calenderHeight='{{calenderHeight}}' allowSameDay rangeText='{{rangeText}}' previous='2' next='2' showConfirm='{{showConfirm}}' shortcut bindselect='rangeSelect' dateType='range' calenderColor='blue'>
+		<gl-cell border valueAlign='right' label='范围选择' labelWidth='20%'>
+		{{rangeValue||'请选择'}}
+	</gl-cell>
+	</calendar>

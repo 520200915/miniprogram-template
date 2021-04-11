@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "tabComponents/pages/index/index",
+    "tabComponents/pages/share/share",
+    "tabComponents/pages/authorize/authorize",
+    "tabComponents/pages/gl-textarea/gl-textarea",
+    "tabComponents/pages/tab-view/tab-view",
+    "tabComponents/pages/gl-cell/gl-cell",
+    "tabComponents/pages/time-horizon/time-horizon",
+    "tabComponents/pages/calendar/calendar",
+    "pages/index/index",
+    "pages/page2/page2",
+    "pages/page3/page3",
+    "tabIndex/pages/index/index",
+    "tabSecond/pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#00A479",
+    "backgroundColor": "#FFFFFF",
+    "position": "bottom",
+    "list": [{
+        "pagePath": "tabIndex/pages/index/index",
+        "text": "首页",
+        "iconPath": "images/test.jpg",
+        "selectedIconPath": "images/test.jpg"
+      },
+      {
+        "pagePath": "tabSecond/pages/index/index",
+        "text": "第二页",
+        "iconPath": "images/test.jpg",
+        "selectedIconPath": "images/test.jpg"
+      },
+      {
+        "pagePath": "tabComponents/pages/index/index",
+        "text": "组件",
+        "iconPath": "images/test.jpg",
+        "selectedIconPath": "images/test.jpg"
+      }
+    ]
+  },
+  "usingComponents": {
+    "time-horizon": "/components/TimeHorizon/TimeHorizon",
+    "gl-textarea": "/components/GlTextarea/GlTextarea",
+    "authorize": "/components/Authorize/Authorize",
+    "tab-view": "/components/TabView/TabView",
+    "gl-cell": "/components/GlCell/GlCell",
+    "share": "/components/Share/Share",
+    "calendar": "/components/Calendar/Calendar"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

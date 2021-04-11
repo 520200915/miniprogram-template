@@ -1,0 +1,6 @@
+
+<block wx:for='{{scopeList}}' wx:key='index'>
+  <view class='authorize-item' bindtap="click" data-type='{{item}}'>{{scopeName[item]}}</view>
+</block>
+
+<authorize scopeType='{{type}}' checkSetting='{{settingStatus}}' bindsuccess='success'></authorize>

@@ -1,0 +1,9 @@
+<view class='layout'>
+	<tab-view tabList='{{list}}' tagIndex='{{tagIndex}}'  bindclick='tabclick' key='test'>
+    <view class='content'>
+      <block wx:for='{{5}}' wx:key='index'>
+        <view class="box" bindtap="copy">{{index}}复制代码</view>
+      </block>
+    </view>
+	</tab-view>
+</view>

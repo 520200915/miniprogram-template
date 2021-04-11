@@ -1,0 +1,14 @@
+<view class='tab-box' id='tabView' style="height:{{height}}">
+	<scroll-view style="height:100%;" scroll-y class='tab' bindscrolltolower='tabScrollTolower'>
+		<view>
+			<block wx:for='{{tabList}}' wx:key='index'>
+				<view class='tab-item {{count==index?"active":""}}' bindtap="click" data-item='{{item}}' data-index='{{index}}'>{{item[key]}}</view>
+			</block>
+		</view>
+	</scroll-view>
+	<view class='view'>
+		<scroll-view style="height:100%" scroll-y scroll-top='{{scrollTop}}' bindscrolltolower='viewScrollTolower'>
+			<slot></slot>
+		</scroll-view>
+	</view>
+</view>

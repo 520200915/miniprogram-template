@@ -1,0 +1,5 @@
+<view class='layout'>
+  <block wx:for='{{componentsList}}' wx:key="index">
+    <view class='components-item' bindtap="jump" data-url='{{item.url}}'>{{item.name}}---组件</view>
+  </block>
+</view>

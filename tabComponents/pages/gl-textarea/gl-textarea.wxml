@@ -1,0 +1,7 @@
+<view class='textarea'>
+  <gl-textarea value='{{value}}' bindinput="input" bindblur="blur" filterEmoji='{{false}}' maxlength='11' placeholder='{{placeholder}}' showWordLimit></gl-textarea>
+</view>
+<text class='text' >
+  {{code}}
+</text>
+<view bindtap="copy">点击复制代码</view>

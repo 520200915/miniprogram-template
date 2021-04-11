@@ -1,0 +1,10 @@
+<gl-cell border  valueAlign='right' label='输入input' labelWidth='20%' required>
+  <input placeholder="请输入" class='time'></input>
+</gl-cell>
+<gl-cell border haveArrow  value='{{a}}' valueAlign='right' label='蛤蛤' labelWidth='20%' bindclick='click'>
+</gl-cell>
+<gl-cell border haveArrow  valueAlign='right' label='picker' labelWidth='20%'>
+  <picker mode="time" class='time'>
+    请输入
+  </picker>
+</gl-cell>

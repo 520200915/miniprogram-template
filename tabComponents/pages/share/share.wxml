@@ -1,0 +1,8 @@
+<view class='share' bindtap="share">点击分享</view>
+
+<share show='{{showShare}}' canvasObject='{{canvasObject}}' binddraw='draw' bindinit='init' wxShare="{{wxShare}}">
+  <view class='box'>
+    <view class='name'>{{canvasObject.data.name}}</view>
+  </view>
+</share>
+

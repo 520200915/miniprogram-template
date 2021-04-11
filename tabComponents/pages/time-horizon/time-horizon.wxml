@@ -1,0 +1,1 @@
+<time-horizon config='{{timeHorizonConfig}}' bindchange='change'></time-horizon>

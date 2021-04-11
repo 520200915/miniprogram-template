@@ -1,0 +1,12 @@
+/* tabComponents/pages/gl-textarea/gl-textarea.wxss */
+.textarea{
+  width: 100%;
+  height: 500rpx;
+  border-bottom: 1rpx solid #999;
+  box-sizing: border-box;
+  padding: 40rpx;
+}
+.text{
+  display: block;
+  padding: 40rpx;
+}

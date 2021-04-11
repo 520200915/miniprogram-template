@@ -1,0 +1,14 @@
+<view class='cell-box'>
+	<view class='cell {{border?"border":""}}' bindtap="click">
+		<view class='cell-label' style="width:{{labelWidth}}">
+			<text wx:if='{{required}}' class='required'>*</text>{{label||'标题'}}
+		</view>
+		<view class='cell-value ' style="width:calc(100% - {{labelWidth}});">
+			<view class='value {{valueAlign}} {{haveArrow}}'>
+				<view class='slot'><slot></slot></view>
+				<view class='details'>{{value}}</view>
+			</view>
+			<image wx:if='{{haveArrow}}' class='arrow' src="../images/arrow-x.png"></image>
+		</view>
+	</view>
+</view>

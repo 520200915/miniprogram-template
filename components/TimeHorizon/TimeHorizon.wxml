@@ -1,0 +1,20 @@
+<view class='time-box'>
+	<picker class='time-picker' mode="date" value="{{startData}}" start="{{startTime}}" bindchange="dateChange" data-type='start'>
+		<view class='time-picker-view'>
+			<view class='time-picker-label'>{{startLabel||'开始时间'}}</view>
+			<view class='time-picker-value {{!startData?"no-data":""}} {{valueAlign}}'>
+				{{startData||'请选择'}}
+				<image class='arrow' src="../images/arrow-x.png"></image>
+			</view>
+		</view>
+	</picker>
+  <picker class='time-picker' mode="date" value="{{endData}}" start="{{startData}}" bindchange="dateChange" data-type='end'>
+		<view class='time-picker-view'>
+			<view class='time-picker-label'>{{endLabel||'结束时间'}}</view>
+			<view class='time-picker-value {{!endData?"no-data":""}} {{valueAlign}}'>
+				{{endData||'请选择'}}
+				<image class='arrow' src="../images/arrow-x.png"></image>
+			</view>
+		</view>
+	</picker>
+</view>

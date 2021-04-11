@@ -1,0 +1,9 @@
+/* tabComponents/pages/authorize/authorize.wxss */
+.authorize-item{
+  width: 100%;
+  height: 88rpx;
+  border-bottom: 2rpx solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

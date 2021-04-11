@@ -1,0 +1,108 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": false,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.15.0",
+  "appid": "wx0b962934a20ad371",
+  "projectname": "%E5%B9%BF%E8%81%94%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A8%A1%E7%89%88",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "分享组件",
+          "pathName": "tabComponents/pages/share/share",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "授权组件",
+          "pathName": "tabComponents/pages/authorize/authorize",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "时间范围选择器",
+          "pathName": "tabComponents/pages/time-horizon/time-horizon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "cell",
+          "pathName": "tabComponents/pages/gl-cell/gl-cell",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "日历",
+          "pathName": "tabComponents/pages/calendar/calendar",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
